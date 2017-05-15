@@ -1,0 +1,358 @@
+.wjs_header {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_header .row {
+  height: 100%;
+  text-align: center;
+}
+.wjs_header .row > div:nth-of-type(-n+3) {
+  border-right: 1px solid #ccc;
+}
+.wjs_header .row > div:nth-of-type(-n+3) > .wjs_code {
+  position: relative;
+  display: block;
+}
+.wjs_header .row > div:nth-of-type(-n+3) > .wjs_code > img {
+  display: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  position: absolute;
+  left: 50%;
+  top: 49px;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.wjs_header .row > div:nth-of-type(-n+3) > .wjs_code:hover > img {
+  display: block;
+}
+.wjs_header .row > div:last-of-type > .btn-danger {
+  background-color: #e92322;
+}
+.wjs_header .row > div:last-of-type > .btn {
+  padding: 3px 15px;
+}
+.wjs_header .row > div:last-of-type > .btn-link {
+  color: #333;
+}
+.navbar-default .navbar-brand {
+  height: 80px;
+  line-height: 50px;
+}
+.navbar-default .navbar-brand > .wjs_icon {
+  font-size: 40px;
+}
+.navbar-default .navbar-brand > span:first-of-type {
+  color: #e92322;
+}
+.navbar-default .navbar-brand > span:last-of-type {
+  color: #333;
+}
+.navbar-default .navbar-nav > li {
+  padding: 0px 5px;
+}
+.navbar-default .navbar-nav > li > a {
+  line-height: 50px;
+  font-size: 16px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li :focus {
+  color: #777;
+  border-bottom: 3px solid #e92322;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active a:hover,
+.navbar-default .navbar-nav > .active a:focus {
+  background-color: #f8f8f8;
+  color: #777;
+  border-bottom: 3px solid #e92322;
+}
+.navbar-default .navbar-toggle {
+  margin-top: 23px;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.wjs_banner .mobileImg {
+  width: 100%;
+  display: block;
+}
+.wjs_banner .mobileImg > img {
+  width: 100%;
+}
+.wjs_banner .pcImg {
+  width: 100%;
+  height: 410px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.wjs_info {
+  padding: 30px;
+}
+.wjs_info .row > div {
+  margin-top: 20px;
+}
+.wjs_info .row > div .wjs_icon {
+  font-size: 30px;
+}
+.wjs_info .row > div > a:hover {
+  color: #e92322;
+}
+.wjs_reverse {
+  height: 60px;
+  line-height: 60px;
+  border-top: 1px solid #ccc;
+}
+.wjs_reverse .wjs_icon {
+  font-size: 18px;
+}
+.wjs_reverse .wjs_now {
+  color: #e92322;
+  border-bottom: 1px dashed #e92322;
+}
+.wjs_reverse a:hover {
+  color: #e92322;
+}
+.wjs_product {
+  background-color: #eee;
+  clear: both;
+  border-top: 1px solid #ccc;
+  padding: 20px;
+  /*产品详细信息块*/
+}
+.wjs_product .tabParent {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+.wjs_product .nav-tabs {
+  border-bottom: none;
+}
+.wjs_product .nav-tabs > li {
+  margin-bottom: 0px;
+  padding: 0px 15px;
+  border-bottom: none;
+}
+.wjs_product .nav-tabs > li > a {
+  background-color: #eee;
+  line-height: 45px;
+  border-radius: 0;
+  border-bottom: none;
+}
+.wjs_product .nav-tabs > li > a:hover {
+  background-color: #eee;
+  border-bottom: 2px solid #e92322;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active a:hover,
+.wjs_product .nav-tabs > li.active a:focus {
+  border: none;
+  background-color: #eee;
+  border-bottom: 3px solid #e92322;
+  border-radius: 0;
+}
+.wjs_product .wjs_pBox {
+  height: 150px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #ddd;
+  margin-top: 20px;
+  /*第一块样式:注意将这块样式添加到最后，防止被 其它样式覆盖*/
+}
+.wjs_product .wjs_pBox > .wjs_Pleft {
+  height: 100%;
+  overflow: hidden;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+.wjs_product .wjs_pBox > .wjs_Pleft > p {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.wjs_product .wjs_pBox > .wjs_Pleft > .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.wjs_product .wjs_pBox > .wjs_Pleft > .row > div:nth-of-type(even) {
+  text-align: right;
+}
+.wjs_product .wjs_pBox > .wjs_Pright {
+  width: 100px;
+  height: 100%;
+  float: right;
+  border-left: 1px dashed #ccc;
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+}
+.wjs_product .wjs_pBox > .wjs_Pright > .wjs_tip {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  width: 100%;
+  transform: translateX(-50%);
+}
+.wjs_product .wjs_pBox > .wjs_Pright > .wjs_tip > span {
+  font-size: 13px;
+  cursor: pointer;
+}
+.wjs_product .wjs_pBox > .wjs_Pright > .wjs_tip > span:nth-of-type(1) {
+  color: #e92322;
+  border: 1px solid #e92322;
+}
+.wjs_product .wjs_pBox > .wjs_Pright > .wjs_tip > span:nth-of-type(2) {
+  color: #1199ef;
+  border: 1px solid #1199ef;
+}
+.wjs_product .wjs_pBox > .wjs_Pright > b {
+  font-size: 40px;
+  color: #e92322;
+}
+.wjs_product .wjs_pBox > .wjs_Pright > sub {
+  color: #e92322;
+  bottom: 0;
+}
+.wjs_product .wjs_pBox > .wjs_Pright > p {
+  font-size: 12px;
+}
+.wjs_product .wjs_pBox > .wjs_Pright::before,
+.wjs_product .wjs_pBox > .wjs_Pright::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #eee;
+  position: absolute;
+  left: -5px;
+}
+.wjs_product .wjs_pBox > .wjs_Pright::before {
+  top: -5px;
+  box-shadow: 0px -1px 1px #ddd inset;
+}
+.wjs_product .wjs_pBox > .wjs_Pright::after {
+  bottom: -5px;
+  box-shadow: 0px 1px 1px #ddd inset;
+}
+.wjs_product .wjs_pBox.active {
+  background-color: #e92322;
+  /*在相同权重的情况下进行样式的覆盖*/
+}
+.wjs_product .wjs_pBox.active > .wjs_Pright > b,
+.wjs_product .wjs_pBox.active > .wjs_Pright sub,
+.wjs_product .wjs_pBox.active > .wjs_Pright p {
+  color: #fff;
+}
+.wjs_product .wjs_pBox.active > .wjs_Pleft {
+  color: #fff;
+  position: relative;
+  /*不回左上角图标*/
+}
+.wjs_product .wjs_pBox.active > .wjs_Pleft::before {
+  content: "\e915";
+  /*一定要指定字体*/
+  font-family: wjs;
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+.wjs_news {
+  padding: 20px;
+}
+.wjs_news .wjs_nTitle {
+  line-height: 50px;
+  font-size: 25px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  position: relative;
+}
+.wjs_news .wjs_nTitle::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  position: absolute;
+  right: -8px;
+  bottom: -4px;
+}
+.wjs_news .wjs_news_line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  border-left: 1px dashed #e92322;
+  left: 45px;
+  top: 0;
+}
+.wjs_news .nav-tabs {
+  border-bottom: none;
+  position: relative;
+}
+.wjs_news .nav-tabs > li {
+  margin-bottom: 60px;
+}
+.wjs_news .nav-tabs > li > a {
+  background-color: #eee;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.wjs_news .nav-tabs > li > a:hover {
+  background-color: #e92322;
+}
+.wjs_news .nav-tabs > li.active > a,
+.wjs_news .nav-tabs > li.active a:hover,
+.wjs_news .nav-tabs > li.active a:focus {
+  background-color: #e92322;
+  border: none;
+}
+.wjs_news .nav-tabs > li .wjs_icon {
+  color: #fff;
+  font-size: 30px;
+}
+.wjs_news .nav-tabs > li:last-of-type {
+  margin-bottom: 0px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .wjs_news .nav-tabs > li {
+    margin: 20px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wjs_news .nav-tabs > li {
+    margin: 20px 0px;
+    width: 25%;
+  }
+}
+.wjs_news .wjs_newslist {
+  list-style: none;
+}
+.wjs_news .wjs_newslist > li {
+  line-height: 60px;
+}
+.wjs_partner {
+  padding: 20px;
+  background-color: #eee;
+  text-align: center;
+}
+.wjs_partner h3 {
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+}
+.wjs_partner ul {
+  list-style: none;
+  display: inline-block;
+}
+.wjs_partner ul > li {
+  float: left;
+  margin-left: 20px;
+}
+.wjs_partner .wjs_icon {
+  font-size: 80px;
+}

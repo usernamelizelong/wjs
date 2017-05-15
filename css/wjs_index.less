@@ -1,0 +1,381 @@
+@color:#e92322;
+@blueColor:#1199ef;
+.wjs_header{
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  .row{
+    height: 100%;
+    text-align: center;
+    > div:nth-of-type(-n+3){
+      border-right: 1px solid #ccc;
+      > .wjs_code{
+        position: relative;
+        display: block;
+        > img{
+          display: none;
+          border: 1px solid #ccc;
+          border-top: none;
+          position: absolute;
+          left: 50%;
+          top:49px;
+          transform:translateX(-50%);
+          z-index: 999;
+        }
+        &:hover{
+          >img{
+            display: block;
+          }
+        }
+      }
+    }
+    > div:last-of-type{
+      > .btn-danger{
+        background-color: @color;
+      }
+      > .btn{
+        padding:3px 15px;
+      }
+      > .btn-link{
+        color: #333;
+      }
+    }
+  }
+}
+
+.navbar-default{
+  .navbar-brand{
+    height: 80px;
+    line-height: 50px;
+    > .wjs_icon{
+      font-size: 40px;
+    }
+    > span:first-of-type{
+      color: @color;
+    }
+    > span:last-of-type{
+      color: #333;
+    }
+  }
+  .navbar-nav{
+    > li{
+      padding:0px 5px;
+      > a{
+        line-height: 50px;
+        font-size: 16px;
+      }
+      > a:hover,:focus{
+        color: #777;
+        border-bottom: 3px solid @color;
+      }
+    }
+    > .active{
+      > a, a:hover,a:focus{
+        background-color: #f8f8f8;
+        color: #777;
+        border-bottom: 3px solid @color;
+      }
+    }
+  }
+
+  .navbar-toggle{
+    margin-top:23px;
+  }
+}
+.navbar{
+  margin-bottom:0px;
+}
+
+.wjs_banner{
+  .mobileImg{
+    width: 100%;
+    display: block;
+  }
+  .mobileImg > img{
+    width: 100%;
+  }
+  .pcImg{
+    width: 100%;
+    height: 410px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+.wjs_info{
+  padding: 30px;
+  .row{
+    >div{
+      margin-top:20px;
+      .wjs_icon{
+        font-size: 30px;
+      }
+      >a:hover{
+        color: @color;
+      }
+    }
+  }
+}
+
+.wjs_reverse{
+  height: 60px;
+  line-height: 60px;
+  border-top: 1px solid #ccc;
+  .wjs_icon{
+    font-size: 18px;
+  }
+  .wjs_now{
+    color: @color;
+    border-bottom: 1px dashed @color;
+  }
+  a:hover{
+    color: @color;
+  }
+}
+
+.wjs_product{
+  .tabParent{
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+  }
+  background-color: #eee;
+  clear: both;
+  border-top:1px solid #ccc;
+  padding: 20px;
+  .nav-tabs{
+    border-bottom: none;
+    > li{
+      margin-bottom: 0px;
+      padding:0px 15px;
+      border-bottom: none;
+      >a{
+        background-color: #eee;
+        line-height: 45px;
+        border-radius: 0;
+        border-bottom: none;
+      }
+      >a:hover{
+        background-color: #eee;
+        border-bottom: 2px solid @color;
+        box-sizing: border-box;
+        border-radius: 0;
+      }
+      &.active{
+        >a,a:hover,a:focus{
+          border: none;
+          background-color: #eee;
+          border-bottom: 3px solid @color;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  /*产品详细信息块*/
+  .wjs_pBox{
+    height: 150px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #ddd;
+    margin-top: 20px;
+    > .wjs_Pleft{
+      height: 100%;
+      overflow: hidden;
+      padding-top:10px;
+      font-size: 12px;
+      color: #666;
+      >p{
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+      }
+      > .row{
+        margin-left:-10px;
+        margin-right:-10px;
+        > div:nth-of-type(even){
+          text-align: right;
+        }
+      }
+    }
+    > .wjs_Pright{
+      width: 100px;
+      height: 100%;
+      float: right;
+      border-left:1px dashed #ccc;
+      position: relative;
+      text-align: center;
+      padding-top:30px;
+      > .wjs_tip{
+        position: absolute;
+        left: 50%;
+        top:20px;
+        width: 100%;
+        transform:translateX(-50%);
+        >span{
+          font-size: 13px;
+          cursor: pointer;
+        }
+        >span:nth-of-type(1){
+          color: @color;
+          border: 1px solid @color;
+        }
+        >span:nth-of-type(2){
+          color: @blueColor;
+          border: 1px solid @blueColor;
+        }
+      }
+      > b{
+        font-size: 40px;
+        color: @color;
+      }
+      >sub{
+        color: @color;
+        bottom: 0;
+      }
+        > p{
+        font-size: 12px;
+      }
+      &::before,&::after{
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #eee;
+        position: absolute;
+        left:-5px;
+      }
+      &::before{
+        top:-5px;
+        box-shadow: 0px -1px 1px #ddd inset;
+      }
+      &::after{
+        bottom:-5px;
+        box-shadow: 0px 1px 1px #ddd inset;
+      }
+    }
+    /*第一块样式:注意将这块样式添加到最后，防止被 其它样式覆盖*/
+    &.active{
+      background-color: @color;
+      /*在相同权重的情况下进行样式的覆盖*/
+      >.wjs_Pright{
+        > b,sub,p{
+          color: #fff;
+        }
+      }
+      >.wjs_Pleft{
+        color: #fff;
+        position: relative;
+        /*不回左上角图标*/
+        &::before{
+          content: "\e915";
+          /*一定要指定字体*/
+          font-family: wjs;
+          font-size: 25px;
+          position: absolute;
+          left: 0;
+          top: -6px;
+        }
+      }
+    }
+  }
+
+}
+
+.wjs_news{
+  padding: 20px;
+  .wjs_nTitle{
+    line-height: 50px;
+    font-size: 25px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+    &::before{
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      position: absolute;
+      right: -8px;
+      bottom: -4px;
+    }
+  }
+  .wjs_news_line{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    border-left:1px dashed @color;
+    left: 45px;
+    top: 0;
+  }
+  .nav-tabs{
+    border-bottom: none;
+    position: relative;
+    >li{
+      margin-bottom:60px;
+      > a{
+        background-color: #eee;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+      > a:hover{
+        background-color: @color;
+      }
+      &.active{
+        >a,a:hover,a:focus{
+          background-color: @color;
+          border: none;
+        }
+      }
+      .wjs_icon{
+        color: #fff;
+        font-size: 30px;
+      }
+    }
+    > li:last-of-type{
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px){
+      >li{
+        margin:20px 30px;
+      }
+    }
+    @media screen and (max-width: 768px){
+      >li{
+        margin:20px 0px;
+        width: 25%;
+      }
+    }
+  }
+  .wjs_newslist{
+    list-style: none;
+    > li{
+        line-height: 60px;
+    }
+  }
+}
+
+.wjs_partner{
+  padding:20px;
+  background-color: #eee;
+  text-align: center;
+  h3{
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+  }
+  ul{
+    list-style: none;
+    display: inline-block;
+    > li{
+      float: left;
+      margin-left:20px;
+    }
+  }
+  .wjs_icon{
+    font-size: 80px;
+  }
+}
+

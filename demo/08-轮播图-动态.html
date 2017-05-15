@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+<style>
+    /*移动端的效果就是图片会随着屏幕的宽度变化而变化*/
+    .mobileImg{
+        width: 100%;
+        display: block;
+    }
+    .mobileImg > img{
+        width: 100%;
+    }
+    /*高度固定，但是始终显示图片中间内容*/
+    .pcImg{
+        width: 100%;
+        height: 410px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+</style>
+<!--class="carousel slide"：它是一个轮播图-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators 点标记 -->
+    <ol class="carousel-indicators">
+        <!--data-target="#carousel-example-generic"：控制的是哪 一个轮播图-->
+        <!--data-slide-to="0"：点击这个点跳转到哪 一个索引页-->
+        <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
+    </ol>
+
+    <!-- Wrapper for slides 图片区域-->
+    <div class="carousel-inner" role="listbox">
+        <!--每一个图片是一个div-->
+       <!-- <div class="item active">
+            &lt;!&ndash;非移动端&ndash;&gt;
+            <a href="" class="pcImg hidden-xs" style="background-image: url('../images/slide_01_2000x410.jpg');"></a>
+            &lt;!&ndash;移动端&ndash;&gt;
+            <a href="" class="mobileImg hidden-sm hidden-md hidden-lg">
+                &lt;!&ndash;图片&ndash;&gt;
+                <img src="../images/slide_01_640x340.jpg" alt="...">
+            </a>
+        </div>
+        <div class="item">
+            <a href="" class="pcImg hidden-xs" style="background-image: url('../images/slide_02_2000x410.jpg');"></a>
+            <a href="" class="mobileImg  hidden-sm hidden-md hidden-lg">
+                &lt;!&ndash;图片&ndash;&gt;
+                <img src="../images/slide_02_640x340.jpg" alt="...">
+            </a>
+        </div>
+        <div class="item">
+            <a href="" class="pcImg hidden-xs" style="background-image: url('../images/slide_03_2000x410.jpg');"></a>
+            <a href="" class="mobileImg hidden-sm hidden-md hidden-lg">
+                &lt;!&ndash;图片&ndash;&gt;
+                <img src="../images/slide_03_640x340.jpg" alt="...">
+            </a>
+        </div>
+        <div class="item">
+            <a href="" class="pcImg hidden-xs" style="background-image: url('../images/slide_04_2000x410.jpg');"></a>
+            <a href="" class="mobileImg hidden-sm hidden-md hidden-lg">
+                &lt;!&ndash;图片&ndash;&gt;
+                <img src="../images/slide_04_640x340.jpg" alt="...">
+            </a>
+        </div>-->
+    </div>
+
+    <!-- Controls 按钮-->
+    <!--data-slide="prev"：功能-->
+    <!--href="#carousel-example-generic"：控制的是哪一个轮播图-->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<script type="text/template" id="imgTEMP">
+    <% for(var i=0;i< items.length;i++){%>
+        <div class="item <%=i==0?'active':''%>">
+            <!--非移动端-->
+            <% if(!isMobile){%>
+                <a href="" class="pcImg hidden-xs" style="background-image: url('<%=items[i].pc%>');"></a>
+            <%} else{%>
+                <!--移动端-->
+                <a href="" class="mobileImg hidden-sm hidden-md hidden-lg">
+                    <!--图片-->
+                     <img src="<%=items[i].mobile%>" alt="...">
+                 </a>
+            <%}%>
+        </div>
+    <%}%>
+</script>
+<script type="text/template" id="indicatorTEMP">
+    <% for(var i=0;i< items.length; i++){ %>
+     <li data-target="#carousel-example-generic" data-slide-to="<%=i%>" class="<%=i==0?'active':''%>"></li>
+    <%} %>
+</script>
+
+<script src="../lib/jquery/jquery.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<!--模板引擎-->
+<script src="../js/template-native.js"></script>
+<!--调用当前页面的js文件-->
+<script src="../js/wjs_index.js"></script>
+</body>
+</html>
